@@ -10,7 +10,7 @@
       "label": "Image ID",
       "description": "IBM Cloud VPC Image ID",
       "type": "string",
-      "default": "r014-e0039ab2-fcc8-11e9-8a36-6ffb6501dd335",
+      "default": "r014-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33",
       "required": true,
       "secured": false,
       "hidden": false,
