@@ -4,7 +4,7 @@ provider "ibm" {
 
 resource "ibm_is_vpc" "test_vpc" {
   name = "test-vpc"
-  tags = "${var.tags}"
+  tags    = "${concat(var.tags, module.camtags.tagslist)}"
 }
 
 resource "ibm_is_subnet" "test_subnet" {
@@ -32,7 +32,7 @@ resource "ibm_is_instance" "web-server" {
   vpc     = "${ibm_is_vpc.test_vpc.id}"
   zone    = "${var.zone}"
   keys    = ["${ibm_is_ssh_key.test_sshkey.id}"]
-  tags    = "${var.tags}"
+  tags    = "${concat(var.tags, module.camtags.tagslist)}"
 }
 
 ## Attach floating IP address to web server VSI
@@ -55,7 +55,7 @@ resource "ibm_is_instance" "db-server" {
   volumes = ["${ibm_is_volume.test-volume.id}"]
   zone    = "${var.zone}"
   keys    = ["${ibm_is_ssh_key.test_sshkey.id}"]
-  tags    = "${var.tags}"
+  tags    = "${concat(var.tags, module.camtags.tagslist)}"
 }
 
 resource "ibm_is_volume" "test-volume" {
@@ -64,5 +64,9 @@ resource "ibm_is_volume" "test-volume" {
   zone     = "${var.zone}"
   iops     = 1000
   capacity = 20
-  tags     = "${var.tags}"
+  tags    = "${concat(var.tags, module.camtags.tagslist)}"
+}
+
+module "camtags" {
+  source  = "../Modules/camtags"
 }

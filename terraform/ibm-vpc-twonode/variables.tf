@@ -24,5 +24,6 @@ variable "zone" {
 
 variable "tags" {
   type = "list"
-  default = ["env:dev", "tag2:test2"]
+  default = ["tag1:test1", "tag2:test2"]
 }
+

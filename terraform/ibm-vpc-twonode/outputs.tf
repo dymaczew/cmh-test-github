@@ -13,3 +13,10 @@ output "db_server_private_ip_address" {
   value = "${ibm_is_instance.db-server.primary_network_interface.0.primary_ipv4_address}"
 }
 
+output "camtags_tagsmap" {
+  value = "${module.camtags.tagsmap}"
+}
+
+output "camtags_tagslist" {
+  value = "${module.camtags.tagslist}"
+}
