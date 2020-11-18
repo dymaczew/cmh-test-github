@@ -92,6 +92,26 @@
       "hidden": false,
       "shortname": "",
       "type": "string"
+    },
+    {
+      "name": "camtags_tagsmap",
+      "label": "Camtags Tagsmap",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "map"
+    },
+    {
+      "name": "camtags_tagslist",
+      "label": "Camtags Tagslist",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "list"
     }
   ]
 }
