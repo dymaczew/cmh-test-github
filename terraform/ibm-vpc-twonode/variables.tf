@@ -23,7 +23,7 @@ variable "zone" {
 }
 
 variable "tags" {
-  type = "list"
+  type = list(string)
   default = ["tag1:test1", "tag2:test2"]
 }
 
