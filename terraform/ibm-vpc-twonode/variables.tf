@@ -9,7 +9,7 @@ variable "public_ssh_key" {
 
 variable "image_id" {
   type = "string"
-  default = "r014-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33"
+  default = "r006-09ff9db7-78cd-42b3-9e82-0729ed3a3360"
 }
 
 variable "profile" {
