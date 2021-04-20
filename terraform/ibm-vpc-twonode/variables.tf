@@ -1,6 +1,6 @@
 variable "region" {
   type = "string"
-  default = "us-east"
+  default = "us-south"
 }
 
 variable "public_ssh_key" {
@@ -19,7 +19,7 @@ variable "profile" {
 
 variable "zone" {
   type = "string"
-  default = "us-east-1"
+  default = "us-south-1"
 }
 
 variable "tags" {
