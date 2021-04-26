@@ -1,24 +1,24 @@
 variable "region" {
-  type = "string"
+  type = string
   default = "us-south"
 }
 
 variable "public_ssh_key" {
-  type = "string"
+  type = string
 }
 
 variable "image_id" {
-  type = "string"
+  type = string
   default = "r006-09ff9db7-78cd-42b3-9e82-0729ed3a3360"
 }
 
 variable "profile" {
-  type = "string"
+  type = string
   default = "bx2-2x8"
 }
 
 variable "zone" {
-  type = "string"
+  type = string
   default = "us-south-1"
 }
 
