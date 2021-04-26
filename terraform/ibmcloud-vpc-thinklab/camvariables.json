@@ -1,0 +1,117 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "image_id",
+      "label": "Image ID",
+      "description": "IBM Cloud VPC Image ID",
+      "type": "string",
+      "default": "r014-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "profile",
+      "label": "Profile",
+      "description": "Profile",
+      "type": "string",
+      "default": "bx2-2x8",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "region",
+      "label": "Region",
+      "description": "Region",
+      "type": "string",
+      "default": "us-east",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "zone",
+      "label": "Availability Zone",
+      "description": "Availability Zone",
+      "type": "string",
+      "default": "us-east-1",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "public_ssh_key",
+      "label": "Public SSH key",
+      "description": "Public SSH key to include in SSH keypair",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "web_server_floating_ip_address",
+      "label": "Web Server Floating IP address",
+      "description": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "web_server_private_ip_address",
+      "label": "Web Server Private IP address",
+      "description": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "db_server_private_ip_address",
+      "label": "DB Server private IP address",
+      "description": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "camtags_tagsmap",
+      "label": "Camtags Tagsmap",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "map"
+    },
+    {
+      "name": "camtags_tagslist",
+      "label": "Camtags Tagslist",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "list"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ibm-vpc-two-node",
+  "description": "Two VSIs with on new VPC",
+  "type": "userCreated",
+  "manifest": {
+    "template_type": "Terraform",
+    "template_format": "HCL",
+    "template_provider": "IBM"
+  },
+  "metadata": {
+    "bullets": []
+  }
+}
