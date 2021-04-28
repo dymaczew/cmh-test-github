@@ -1,5 +1,5 @@
 provider "ibm" {
-  region = ${var.region}
+  region = "${var.region}"
 }
 
 resource "random_id" "default" {
