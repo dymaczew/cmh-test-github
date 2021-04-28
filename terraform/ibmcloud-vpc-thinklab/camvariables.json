@@ -30,6 +30,18 @@
       "immutable_after_create": false
     },
     {
+      "name": "prefix",
+      "label": "Prefix",
+      "description": "A prefix added to teh resouces name to make them unique",
+      "type": "string",
+      "default": "ChangeMe",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": true
+    },
+    {
       "name": "region",
       "label": "Region",
       "description": "Region",

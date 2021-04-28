@@ -27,7 +27,7 @@ variable "tags" {
   default = ["tag1:test1", "tag2:test2"]
 }
 
-variable "username" {
+variable "prefix" {
   type = string
   default = "changeme"
 }
