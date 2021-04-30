@@ -28,6 +28,7 @@ resource "ibm_is_instance" "web-server" {
   name    = "${var.prefix}-${random_id.default.hex}-web-server-vsi"
   image   = "${var.image_id}"
   profile = "${var.profile}"
+  user_data = file("userdata.tpl")
 
   primary_network_interface {
     subnet = "${ibm_is_subnet.test_subnet.id}"
