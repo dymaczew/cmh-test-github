@@ -31,6 +31,7 @@ resource "ibm_is_instance" "web-server" {
 
   primary_network_interface {
     subnet = "${ibm_is_subnet.test_subnet.id}"
+    security_groups = ["${ibm_is_security_group.webapptier-securitygroup.id}"]
   }
 
   vpc     = "${ibm_is_vpc.test_vpc.id}"
