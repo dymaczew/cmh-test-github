@@ -30,7 +30,7 @@ resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule2" {
     port_min = 80
     port_max = 80
   }
-  depends_on = [ibm_is_security_group.testacc_security_group]
+  depends_on = [ibm_is_security_group.webapptier-securitygroup]
 }
 
 resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule3" {
@@ -39,5 +39,5 @@ resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule3" {
   ip_version = "ipv4"
   remote     = "0.0.0.0/0"
 
-  depends_on = [ibm_is_security_group.testacc_security_group]
+  depends_on = [ibm_is_security_group.webapptier-securitygroup]
 }
