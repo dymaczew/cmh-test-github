@@ -41,7 +41,7 @@ resource "ibm_is_instance" "web-server" {
 
   vpc     = "${ibm_is_vpc.test_vpc.id}"
   zone    = "${var.zone}"
-  keys    = ["${ibm_is_ssh_key.test_sshkey.id}"]
+  keys    = ["${ibm_is_ssh_key.test_sshkey.id}", "$var.dte-dallas-sshkey"]
   tags    = "${concat(var.tags, module.camtags.tagslist, local.lifecycle_tags)}"
 
   lifecycle {
@@ -72,7 +72,7 @@ resource "ibm_is_instance" "db-server" {
   vpc     = "${ibm_is_vpc.test_vpc.id}"
   volumes = ["${ibm_is_volume.test-volume.id}"]
   zone    = "${var.zone}"
-  keys    = ["${ibm_is_ssh_key.test_sshkey.id}"]
+  keys    = ["${ibm_is_ssh_key.test_sshkey.id}", "$var.dte-dallas-sshkey"]
   tags    = "${concat(var.tags, module.camtags.tagslist, local.lifecycle_tags)}"
 
   lifecycle {

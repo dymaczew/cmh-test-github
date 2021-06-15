@@ -35,3 +35,9 @@ variable "prefix" {
 variable "resource_group" {
   type = string
   default = "075cb81ce7b944ad8a3e8f8cc46ccebb"
+}
+
+variable "dte-dallas-sshkey" {
+  type = string
+  default = "r006-effcadbf-929d-4b3b-ae37-fb9c4faf97f4"
+}
