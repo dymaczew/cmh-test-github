@@ -4,6 +4,7 @@
 resource "ibm_is_security_group" "webapptier-securitygroup" {
   name = "${var.prefix}-${random_id.default.hex}-webapptier-securitygroup"
   vpc  = "${ibm_is_vpc.test_vpc.id}"
+  resource_group = var.resource_group 
 }
 
 resource "ibm_is_security_group_rule" "webapptier-securitygroup-rule1" {
