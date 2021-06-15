@@ -1,5 +1,5 @@
 {
-  "name": "ibmcloud-vpc-thinklab",
+  "name": "ibmcloud-vpc-infralab",
   "description": "Two VSIs with on new VPC",
   "type": "userCreated",
   "manifest": {

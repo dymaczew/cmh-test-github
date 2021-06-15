@@ -1,5 +1,5 @@
 provider "ibm" {
-  region = "${var.region}"
+  region = var.region
 }
 
 resource "random_id" "default" {
@@ -32,7 +32,7 @@ resource "ibm_is_instance" "web-server" {
   image   = "${var.image_id}"
   profile = "${var.profile}"
   user_data = file("userdata.tpl")
-  resource_group = "${var.resource_group}" 
+  resource_group = var.resource_group 
 
   primary_network_interface {
     subnet = "${ibm_is_subnet.test_subnet.id}"
@@ -41,7 +41,7 @@ resource "ibm_is_instance" "web-server" {
 
   vpc     = "${ibm_is_vpc.test_vpc.id}"
   zone    = "${var.zone}"
-  keys    = ["${ibm_is_ssh_key.test_sshkey.id}", "$var.dte-dallas-sshkey"]
+  keys    = ["${ibm_is_ssh_key.test_sshkey.id}", var.dte-dallas-sshkey]
   tags    = "${concat(var.tags, module.camtags.tagslist, local.lifecycle_tags)}"
 
   lifecycle {
@@ -72,7 +72,7 @@ resource "ibm_is_instance" "db-server" {
   vpc     = "${ibm_is_vpc.test_vpc.id}"
   volumes = ["${ibm_is_volume.test-volume.id}"]
   zone    = "${var.zone}"
-  keys    = ["${ibm_is_ssh_key.test_sshkey.id}", "$var.dte-dallas-sshkey"]
+  keys    = ["${ibm_is_ssh_key.test_sshkey.id}", "${var.dte-dallas-sshkey}"]
   tags    = "${concat(var.tags, module.camtags.tagslist, local.lifecycle_tags)}"
 
   lifecycle {
