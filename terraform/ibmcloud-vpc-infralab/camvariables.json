@@ -18,6 +18,18 @@
       "immutable_after_create": false
     },
     {
+      "name": "dte-dallas-sshkey",
+      "label": "dte-sshkey-id",
+      "description": "SSH Key Id used by DTE for audit purposes",
+      "type": "string",
+      "default": "r006-effcadbf-929d-4b3b-ae37-fb9c4faf97f4",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
       "name": "ipv4_cidr_block",
       "label": "ipv4_cidr_block",
       "description": "ipv4_cidr_block",
