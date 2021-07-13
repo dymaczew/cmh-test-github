@@ -60,7 +60,7 @@ resource "ibm_is_floating_ip" "test_floatingip" {
 
 ## DB server VSI with additional data volume
 resource "ibm_is_instance" "db-server" {
-  name    = "${var.prefix}-${random_id.default.hex}-db-server-vsi"
+  name    = "${module.camtags.service_name}-${random_id.default.hex}-db-server-vsi"
   image   = "${var.image_id}"
   profile = "${var.profile}"
   resource_group = "${var.resource_group}" 
