@@ -18,6 +18,18 @@
       "immutable_after_create": false
     },
     {
+      "name": "ipv4_cidr_block",
+      "label": "ipv4_cidr_block",
+      "description": "ipv4_cidr_block",
+      "type": "string",
+      "default": "10.240.0.0/24",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
       "name": "profile",
       "label": "Profile",
       "description": "Profile",
