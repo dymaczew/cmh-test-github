@@ -3,6 +3,11 @@ variable "region" {
   default = "us-south"
 }
 
+variable "ipv4_cidr_block" {
+  type = string
+  default = "10.240.0.0/24"
+}
+
 variable "public_ssh_key" {
   type = string
 }
