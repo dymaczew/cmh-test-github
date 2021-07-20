@@ -1,8 +1,14 @@
 #---------------------------------------------------------
 # Create Webapptier Security Group & Rules
 #---------------------------------------------------------
+
+locals {
+  prefix = lower(var.prefix)
+}
+
+
 resource "ibm_is_security_group" "webapptier-securitygroup" {
-  name = "${var.prefix}-${random_id.default.hex}-webapptier-securitygroup"
+  name = "${local.prefix}-${random_id.default.hex}-webapptier-securitygroup"
   vpc  = "${ibm_is_vpc.test_vpc.id}"
   resource_group = var.resource_group 
 }
