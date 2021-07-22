@@ -75,9 +75,6 @@ resource "vsphere_virtual_machine" "vm" {
       network_interface {
       }
 
-      network_interface {
-      }
-      
       ipv4_gateway    = var.vm_ipv4_gateway
       dns_suffix_list = var.dns_suffixes
       dns_server_list = var.dns_servers
