@@ -395,5 +395,14 @@
     }
   ],
   "template_output_params": [
+    {
+      "name": "ip_address",
+      "label": "Default IP address of VM",
+      "description": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
   ]
 }
