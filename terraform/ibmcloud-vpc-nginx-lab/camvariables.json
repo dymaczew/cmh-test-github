@@ -124,17 +124,6 @@
       "hidden": false,
       "immutable": false,
       "immutable_after_create": false
-    },
-    {
-      "name": "public_ssh_key",
-      "label": "Public SSH key",
-      "description": "Public SSH key to include in SSH keypair",
-      "type": "string",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
     }
   ],
   "template_output_params": [

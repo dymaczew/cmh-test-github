@@ -14,18 +14,18 @@ locals {
 ## Web server VSI
 resource "ibm_is_instance" "web-server" {
   name    = "${local.prefix}-${random_id.default.hex}-web-server-vsi"
-  image   = "${var.image_id}"
-  profile = "${var.profile}"
+  image   = var.image_id
+  profile = var.profile
   user_data = file("userdata.tpl")
   resource_group = var.resource_group 
 
   primary_network_interface {
-    subnet = "${var.subnet}"
-    security_groups = ["${var.securitygroup}"]
+    subnet = var.subnet
+    security_groups = [var.securitygroup]
   }
 
-  vpc     = "${var.vpcid}"
-  zone    = "${var.zone}"
+  vpc     = var.vpc
+  zone    = var.zone
   keys    = [var.dte-dallas-sshkey]
   tags    = "${concat(var.tags, module.camtags.tagslist, local.lifecycle_tags)}"
 
@@ -40,7 +40,7 @@ resource "ibm_is_instance" "web-server" {
 resource "ibm_is_floating_ip" "test_floatingip" {
   name   = "${local.prefix}-${random_id.default.hex}-fip"
   target = "${ibm_is_instance.web-server.primary_network_interface.0.id}"
-  resource_group = "${var.resource_group}" 
+  resource_group = var.resource_group 
 }
 
 module "camtags" {
