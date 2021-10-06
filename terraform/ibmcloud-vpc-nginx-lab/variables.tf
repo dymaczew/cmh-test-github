@@ -13,7 +13,7 @@ variable "image_id" {
   default = "r006-13938c0a-89e4-4370-b59b-55cd1402562d"
 }
 
-variable "vpcid" {
+variable "vpc" {
   type = string
   default = ""
 }
