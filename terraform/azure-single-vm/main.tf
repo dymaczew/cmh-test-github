@@ -178,12 +178,12 @@ resource "azurerm_virtual_machine" "vm" {
   location              = var.azure_region
   resource_group_name   = azurerm_resource_group.default.name
   network_interface_ids = [azurerm_network_interface.vm.id]
-  vm_size               = "Standard_B1s"
+  vm_size               = "Standard_A0"
 
   storage_image_reference {
     publisher = "OpenLogic"
     offer     = "CentOS"
-    sku       = "7_8-gen2"
+    sku       = "7_9"
     version   = "latest"
   }
 
